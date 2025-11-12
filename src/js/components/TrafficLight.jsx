@@ -1,36 +1,26 @@
 import React, { useState } from "react";
+import '../../styles/index.css'
+
+export const TrafficLight = () => {
+
+    let [light, setLight] = useState("yellow")
+    let [color, setColor] = useState("");
 
 
+    return (
+        <div className="container center" >
 
-export const TrafficLight=()=>{
+            <div className="top"></div>
 
-    let [color, setColor] = useState (0);
+            <div className="trafficLigth">
+                <div id="red" className={` circle ${color == "red" ? "effect" : "bg-dark"}`} onClick={() => setColor("red")}></div>
+                <div id="yellow" className={` circle ${color == "yellow" ? "effect" : "bg-dark"}`} onClick={() => setColor("yellow")}></div>
+                <div id="green" className={` circle ${color == "green" ? "effect" : "bg-dark"}`} onClick={() => setColor("green")}></div>
 
-    let change =()=>{
+            </div>
+        </div>
 
-        
-    }
-
-
-
-return(
-
-
-
-    <div>
-            <div id="red" className="rounded-circle"></div>
-			<div id="yellow" className="rounded-circle">2</div>
-			<div id="green" className="rounded-circle">3</div>
-    </div>
-
-
-
-
-)
-
-
-
-
+    )
 
 
 }
